@@ -5,7 +5,7 @@ ul {
     padding:100px,
 }
 .responsive {
-    width: 10%;
+    width: auto;
     height: auto;
     float: left;
     margin: auto;
@@ -25,7 +25,32 @@ ul {
 .container-fluid{
     width :100%;
 }
-.img-fluid{
+.img{
     max-width: 100%;
      height: auto;
 }
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color:rgb(53, 46, 46);
+    color: white;
+    text-align: center;
+  }
+  .container{
+      margin: auto;
+      widows: 100%;
+      height: auto;
+      align-items: center;
+  }
+  .card-header{
+      display: flex;
+  }
+  .flex-container{
+      display: flex;
+      width: 100%;
+    align-items: center;
+  }
+

@@ -9,115 +9,118 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet">
     <!-- Material Design Bootstrap -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.0/css/mdb.min.css" rel="stylesheet">
+   <!--  mon ficher css -->
+   <link href ="Instadog.css" rel="stylesheet">
 
-    <nav class="navbar navbar-dark default-color">
-        <div class="container-fluid">
-            <img src="/home/cf/projets/Instadog/images/Instadog.png" height="10%" width="10%" alt="test img" class="responsive">
-            <form class="form-inline my-2 my-lg-0 ml-auto">
-                <input class="form-control" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-white btn-md my-2 my-sm-0 ml-3" type="submit">Search</button>
-            </form>
+    <!--Navbar-->
+    <nav class="navbar navbar-light navbar-1 white">
+
+        <!-- Navbar brand -->
+        <a class="navbar-brand" href="#"></a>
+    
+        <!-- Collapse button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent15"
+        aria-controls="navbarSupportedContent15" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+    
+        <!-- Collapsible content -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent15">
+    
+        <!-- Links -->
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item ">
+                <a class="nav-link" href="#">Gallerie <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="article.html">Articles</a>
+            </li>
+            <li class="nav-item ">
+                <a class="nav-link" href="Nouvel Article(fini).html">Ajouter un article <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item ">
+                <a class="nav-link" href="nouveau-chien(ter).html">Ajouter un chien  <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">chercher</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">log out</a>
+            </li>
+        </ul>
+        <!-- Links -->
+
+    
         </div>
+        <!-- Collapsible content -->
+    
     </nav>
-    <!--/.Navbar-->
-</head>
+  <!--/.Navbar-->
+</head>  
 
 <body>
     <form class="border border-light p-5">
 
-        <p class="h4 mb-4 text-center">Ajouter un chien </p>
+      <p class="h4 mb-4 text-center">Inscrire Un Nouveau Chien  </p>
 
-        <input type="text" id="defaultRegisterFormFirstName" class="form-control" placeholder="Nom de cien">
+      
 
-        <input type="text" id="defaultRegisterFormLastName" class="form-control" placeholder="Surnam">
+      <input type="text" id="defaultRegisterFormFirstName" class="form-control" placeholder="Nom de cien">
 
-        <input type="email" id="defaultRegisterFormEmail" class="form-control mb-4" placeholder="Race">
+      <input type="text" id="defaultRegisterFormLastName" class="form-control" placeholder="Surnam">
 
-        <input type="email" id="defaultRegisterFormEmail" class="form-control mb-4" placeholder="Age">
+      <input type="email" id="defaultRegisterFormEmail" class="form-control mb-4" placeholder="Race">
 
-        <input type="email" id="defaultRegisterFormEmail" class="form-control mb-4" placeholder="Elevage">
+      <input type="email" id="defaultRegisterFormEmail" class="form-control mb-4" placeholder="Age">
 
-        <!-- inserer un photo -->
-        <div class="input-group">
-            <div class="input-group-prepend">
-                <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
-            </div>
-            <div class="custom-file">
-                <input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
-                <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
-            </div>
+      <input type="email" id="defaultRegisterFormEmail" class="form-control mb-4" placeholder="Elevage">
+
+      <!-- inserer un photo -->
+      <div class="input-group">
+
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
         </div>
 
-        <div class="form-group shadow-textarea">
-                <label for="exampleFormControlTextarea6"> </label>
-                <textarea class="form-control z-depth-1" id="exampleFormControlTextarea6" rows="3" placeholder="Inserer un article"></textarea>
+        <div class="custom-file">
+            <input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
+            <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
         </div>
 
-        <button class="btn btn-info my-4 btn-block" type="submit">Inserer</button>
+      </div>
 
-  <!-- Footer -->
-<footer class="page-footer font-small cyan darken-3">
+      <div class="form-group shadow-textarea">
+        <label for="exampleFormControlTextarea6"> </label>
+        <textarea class="form-control z-depth-1" id="exampleFormControlTextarea6" rows="3" placeholder="Inserer un article"></textarea>
+      </div>
 
-        <!-- Footer Elements -->
-        <div class="container">
-          <!-- Grid row-->
-          <div class="row">
-            <!-- Grid column -->
-            <div class="col-md-12 py-5">
-              <div class="mb-5 flex-center">
-    
-                <!-- Facebook -->
-                <a class="fb-ic">
-                  <i class="fab fa-facebook-f fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
-                </a>
-                <!-- Twitter -->
-                <a class="tw-ic">
-                  <i class="fab fa-twitter fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
-                </a>
-                <!-- Google +-->
-                <a class="gplus-ic">
-                  <i class="fab fa-google-plus-g fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
-                </a>
-                <!--Linkedin -->
-                <a class="li-ic">
-                  <i class="fab fa-linkedin-in fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
-                </a>
-                <!--Instagram-->
-                <a class="ins-ic">
-                  <i class="fab fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
-                </a>
-                <!--Pinterest-->
-                <a class="pin-ic">
-                  <i class="fab fa-pinterest fa-lg white-text fa-2x"> </i>
-                </a>
-              </div>
-            </div>
-            <!-- Grid column -->
-    
-          </div>
-          <!-- Grid row-->
-    
+        <button class="btn btn-info my-4 btn-block" type="submit">Inserer</button><br><br>
+      <!-- footer -->
+        <div class="footer">
+            <p>S'enregistrer avec :</p>
+            <a type="button" class="light-blue-text mx-2">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a type="button" class="light-blue-text mx-2">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a type="button" class="light-blue-text mx-2">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a type="button" class="light-blue-text mx-2">
+                <i class="fab fa-github"></i>
+            </a>
+
+        <div class="footer-copyright text-center py-3">
+        ©Realise 2018:
+            Cr&eacute;er par Rana et Joris
         </div>
-        <!-- Footer Elements -->
-    
-        <!-- Copyright -->
-        <div class="footer-copyright text-center py-3">©Realise 2018:
-          Creer par Rana et Joris
-        </div>
-        <!-- Copyright -->
-    
-      </footer>
-      <!-- Footer -->
-    <!-- JQuery -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <!-- Bootstrap tooltips -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
-    <!-- Bootstrap core JavaScript -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/js/bootstrap.min.js"></script>
-    <!-- MDB core JavaScript -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.0/js/mdb.min.js"></script>
+</div>
 
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
 
 </body>
+
 
 </html>
