@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Bootstrap Example</title>
+</head>
+  <title>Instadog Gallerie</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Font Awesome -->
@@ -17,6 +18,28 @@
   <link href ="Instadog.css" rel="stylesheet">
 
     <!--Navbar-->
+    <div class="container-fluid">
+        <img src="/home/cf/Projets/Instadog/Instadog.png" height="10%" width="10%" alt="test img" class="responsive">
+        <form class="form-inline my-2 my-lg-0 ml-auto">
+            <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-white btn-md my-2 my-sm-0 ml-3" type="submit">Search</button>
+        </form>
+    </div>
+    <style>
+    .outer-div {
+      padding: 30px;
+      text-align: center;
+ }
+ .inner-div {
+      display: inline-block;
+      padding: 20px;
+ }
+</style>
+ 
+ <div class="outer-div">
+   <div class="inner-div">
+     </div>
+ </div>
     <nav class="navbar navbar-light navbar-1 white">
     
         <!-- Navbar brand -->
@@ -52,11 +75,16 @@
     </nav>
 </head>
 <body>
+    <text-align="center">
+  <center><h1>Gallerie de toutous</h1></center><display="flex">
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
           <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
           <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
           <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+
         </ol>
         <div class="carousel-inner">
           <div class="carousel-item active">
@@ -77,74 +105,14 @@
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="sr-only">Next</span>
         </a>
-      </div>
-
-
-
-
-  <div class="container">  
-    <table width="500" border="3" cellpadding="10">
-        <tr>
-          <td align="center" valign="center">
-            <img src="https://cdn.pixabay.com/photo/2016/12/13/05/15/puppy-1903313__340.jpg" class="img-fluid" max-width= "100%" height= "auto">
-            <br />
-            Medor
-          </td>
-                
-          <td align="center" valign="center">
-            <img src="https://img1.closermag.fr/var/closermag/storage/images/insolite/videos/une-artiste-se-maquille-comme-son-husky-le-resultat-est-bluffant-!-video-551810/4828584-1-fre-FR/Une-artiste-se-maquille-comme-son-husky-le-resultat-est-bluffant-!-video_exact1024x768_l.jpg" class="img-fluid" max-width= "100%" height= "auto">
-            <br />
-            Boule
-          </td>
-
-          <td align="center" valign="center">
-            <img src="https://d3jkudlc7u70kh.cloudfront.net/dog-fact.jpg" height="300" width="300" alt="test img" class="img-fluid">
-            <br />
-            Rantanplan
-          </td>
-
-          <td align="center" valign="center">
-            <img src="https://cdn.theatlantic.com/assets/media/img/mt/2019/01/49792399_389898768424677_1310973378593320511_n/lead_720_405.jpg?mod=1548694335" class="img-fluid max-width: 100%;و height: auto">
-            <br />
-            Crocky
-          </td>
-                        
-        </tr>
-   
-                
-        <tr>
-          <td align="center" valign="center">
-            <img src="http://www.dogbreedslist.info/uploads/allimg/dog-pictures/Cavalier-King-Charles-Spaniel-1.jpg" height="300" width="300" alt="test img" class="responsive">
-            <br />
-            Medor
-          </td>
-                  
-          <td align="center" valign="center">
-            <img src="https://data.pixiz.com/output/user/frame/preview/400x400/5/5/1/4/714155_de246.jpg" height="300" width="300" alt="test img" class="responsive">
-            <br />
-            Boule
-          </td>
-
-          <td align="center" valign="center">
-            <img src="https://cdn3-www.dogtime.com/assets/uploads/gallery/basset-hound-dog-breed-pictures/5-runforward.jpg" height="300" width="300" alt="test img" class="responsive">
-            <br />
-            Rantanplan
-          </td>
-
-          <td align="center" valign="center">
-              <img src="http://akila.fr/wp-content/uploads/2018/11/chien-drole-2-1.jpg" height="300" width="300" alt="test img" class="responsive">
-              <br />
-              Crocky
-          </td>
-              
-        </tr>
-  </table>
+      </div>  
   </div>
       
   <br>
-  <input type="button" value="Ajouter un Chien"></p>
-  <input type="button" value="Inscription"></p>
-   
+  <center>
+  <input type="button" value="Ajouter un Chien">
+  <input type="button" value="Profile"></p>
+</center>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
