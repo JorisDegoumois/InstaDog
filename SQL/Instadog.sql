@@ -38,7 +38,7 @@ iD INT (100),
 userId INT (100),
 articleId INT (100),
 login VARCHAR (25),
-message VARCHAR (255),
+texte VARCHAR (255),
 date DATE,
 FOREIGN KEY (userId) REFERENCES Profile_User (userId),
 FOREIGN KEY (articleId) REFERENCES Article (articleId)

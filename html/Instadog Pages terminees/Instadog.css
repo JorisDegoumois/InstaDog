@@ -55,6 +55,7 @@ body {
     background-color:rgb(53, 46, 46);
     color: white;
     text-align: center;
+    margin: auto;
   }
 
   .container{
@@ -78,7 +79,7 @@ body {
       margin-right: 5%;
   }
 p{
-    padding-top: 75px;
+  /*   padding-top: 75px; */
     padding-left: 15px;
 
 }
@@ -186,4 +187,15 @@ table {
 }
 .container2{
     margin-bottom: 150px;
+}
+.center{
+    align-items: center;
+}
+.card-footer{
+    width: 100%;
+}
+.card{
+    width: 50%;
+    margin:auto;
+    display: block;
 }

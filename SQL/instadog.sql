@@ -10,15 +10,15 @@ grant all privilege ON InstaDog.* to "adminInstadog"@"localhost"
 
 
 create table Profile_User(
-    userId int(100) not null primary key,
+    userId int(100) AUTO_INCREMENT primary key,
     nom varchar (255),
     prenom varchar(255),
     password varchar (255),
-    login varchar(25)
+    email varchar(25)
 );
 
 create table Chien(
-    chienId int(100) not null primary key,
+    chienId int(100) AUTO_INCREMENT primary key,
     userId int(100),
     nom varchar (255),
     race varchar(255),
@@ -30,7 +30,7 @@ create table Chien(
 );
 
 create table Article (
-    articleId int (100) not null primary key,
+    articleId int (100) AUTO_INCREMENT primary key,
     chienId int(100),
     message varchar(255),
     photo varchar(255),
@@ -39,7 +39,7 @@ create table Article (
 );
 
 create table commentaire (
-    id int(100) not null primary key,
+    id int(100) AUTO_INCREMENT primary key,
     userId int(100),
     articleId int (100),
     login varchar(25),
