@@ -1,24 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 
-        <head>
-                <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-                        <!-- Font Awesome -->
-                <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
-                <!-- Bootstrap core CSS -->
-                <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet">
-                <!-- Material Design Bootstrap -->
-                <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.0/css/mdb.min.css" rel="stylesheet">
-                <!--  mon ficher css -->
-                <link href ="Instadog.css" rel="stylesheet">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.0/css/mdb.min.css" rel="stylesheet">
+        <link href ="Instadog.css" rel="stylesheet">
      </head>        
 
     <body>
-
-        <!--Navbar-->
         <nav class="navbar navbar-light navbar-1 white">
 
-                <!-- Navbar brand -->
                 <a class="navbar-brand" href="#"></a>
             
                 <!-- Collapse button -->
@@ -102,7 +95,7 @@
 
             <a href="Nouvel Article(fini).html"><button class="btn btn-info my-4 btn-block"  type="submit">ajouter un article</button></a>
         </div>
-    </div>
+     </div>
 
     <div class="footer" padding-top =200px>
         <p>S'enregistrer avec :</p>

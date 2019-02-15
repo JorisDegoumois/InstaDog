@@ -39,7 +39,7 @@ class Connexion {
             $requete_prepare=$this->connexion->prepare(
                 "SELECT * 
                 FROM Chien
-                WHERE getenregistrechienId = :id");
+                WHERE chienId = :id");
              $requete_prepare->execute(array(":id"=>$id));
             $chienProfile=$requete_prepare->fetchObject("Chien");
             return $chienProfile;
@@ -134,14 +134,21 @@ class Connexion {
             $requete_prepare->execute(array("email"=>$email));
             $login=$requete_prepare->fetchObject("User");
             return $login;
-        
         } 
 
+        //function pour login user by Email
+        function getpassword($pwd){
+        $requete_prepare=$this->connexion->prepare(
+                "SELECT *  FROM Profile_User
+                WHERE pwd = :pwd");
+            $requete_prepare->execute(array("pwd"=>$pwd));
+            $loginpwd=$requete_prepare->fetchObject("User");
+            return $loginpwd;
+       
+        }
 }
        
  
-
-
     class User {
         private $userId;
         private $prenom;

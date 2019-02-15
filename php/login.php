@@ -24,11 +24,12 @@ $user =$appli->getenregistre($_POST['email']);
     /* $hash_pass = password_hash($pwd, PASSWORD_DEFAULT); */
         if ($user!=null){
             $email  = $_POST['email'];
-            var_dump( $_POST['email']);
             $pwd =$_POST['pwd'];
-            var_dump(password_verify($pwd, $User->getPwd));
+            var_dump(password_verify($pwd, $appli->getpassword($_POST['pwd'])));
 
-            $$pwd = $_POST['pwd'];  $pwd = $_POST['pwd'];$id  = $user->getUserId();
+            $$pwd = $_POST['pwd'];  
+            $pwd = $_POST['pwd'];
+            $id  = $user->getUserId();
  
 
     
@@ -38,7 +39,7 @@ $user =$appli->getenregistre($_POST['email']);
         $_SESSION['id']  =$id;
 
           //  echo "You are Login Succesfully";
-            header('location:instadog_gallery.html');
+            //header('location:instadog_gallery.html');
 
             //} else { 
 

@@ -62,6 +62,7 @@ session_start();
     
      </nav>
     <!-- fini navbaer -->     
+    <div data-spy="scroll" data-target="#scrollspy-nav" data-offset="0" style="overflow: scroll">
 
     <form class="border border-light p-5"method="post">
 

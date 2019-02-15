@@ -43,7 +43,7 @@
                 <a class="nav-link" href="#">chercher</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">log out</a>
+                <a class="nav-link" href="logout.php">log out</a>
             </li>
         </ul>
         <!-- Links -->

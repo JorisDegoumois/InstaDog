@@ -54,9 +54,10 @@ $nouveauChien=$appli->insertChien(4,"loup","americe",3,"Roxi","Dogzer","okoko");
 //tester le function insere un nouveau user
 //اختبار قغالية تابع الحصول على معلومات مستخدم جديد 
 $nouveauArticle=$appli->insertArticle("2", "lolo est un chien tres calm", "https://static.toutoupourlechien.com/2018/03/chien-loup-tcheque-300x200.jpg","2018-02-03");
-*/
+
 $user=$appli->getenregistre("saoudjarwa@gmail.com" ,"saoud");
 echo $user->email;
-
-
+*/
+$pass=$appli->getpassword("1234");
+var_dump($pass);
 ?>
