@@ -54,7 +54,7 @@ require ("connexion_instadog.php");
 </nav>
 
 <?php
-$id  = $Chiem->getUserId();
+//$id  = $Chiem->getUserId();
  if (isset($_POST['submit']))
     {
         $_SESSION['iduser']  =$id;

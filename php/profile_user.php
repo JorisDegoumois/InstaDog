@@ -17,16 +17,11 @@
     
 
     <body> 
-
-
         <!--Navbar-->
         <nav class="navbar navbar-light navbar-1 white">
 
             <a class="navbar-brand" href=""></a>.
            
-
-                <?php echo $_SESSION['nom']; echo $_SESSION['prenom'];?>
-
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent15"
             aria-controls="navbarSupportedContent15" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
           

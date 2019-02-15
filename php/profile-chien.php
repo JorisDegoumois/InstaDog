@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<?php session_start() ?>
 <html lang="en">
 
     <head>
@@ -14,11 +15,12 @@
     </head>
 
     <body>
+    
         <!--Navbar-->
-        <nav class="navbar navbar-light navbar-1 white">
+            <nav class="navbar navbar-light navbar-1 white">
 
         <!-- Navbar brand -->
-        <a class="navbar-brand" href="#"></a>
+         <a class="navbar-brand" href="#"></a>
     
         <!-- Collapse button -->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent15"
@@ -57,8 +59,27 @@
     </nav>
         <!--/.Navbar-->
    
-        <div data-spy="scroll" data-target="#scrollspy-nav" data-offset="0" style="overflow: scroll">
-            
+   <!--comencer--> 
+    <div data-spy="scroll" data-target="#scrollspy-nav" data-offset="0" style="overflow: scroll">
+        <?php  
+            require ("connexion_instadog.php");
+            $appli= new Connexion ;
+                    
+                    /*  
+                    echo $_SESSION['userId']; */
+                    
+            $Dogs = $appli->getChienParUserId($_SESSION['userId']);
+                    
+                        
+                    echo '<div class="col-md-6 mb-5">
+                            <a href="#"><img src="'.$Dog->getPhoto().'" class="img-thumbnail" width="400px" height="400px"></a>
+                            '.$Dog->getNom().'
+                            '.$Dog-> getRace().'
+                            '.$Dog-> getRace().'
+                            </div>';
+
+                    }
+                ?>
             <strong><h1 style="text-align: center" font-family="fallback">ROCKY</h1></strong>
             <div >
                 <center><img  src="http://www.wallfizz.com/animaux/chien/218-petit-chien-WallFizz.jpg" width="200px" height="200px" ></center>

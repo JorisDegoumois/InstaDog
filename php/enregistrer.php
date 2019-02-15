@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+<head>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
             <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
@@ -11,52 +12,53 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.0/css/mdb.min.css" rel="stylesheet">
    <!--  mon ficher css -->
    <link href ="Instadog.css" rel="stylesheet">
+</head>
 
-    <!--Navbar-->
-    <nav class="navbar navbar-light navbar-1 white">
+<body>
+   <div data-spy="scroll" data-target="#scrollspy-nav" data-offset="0" style="overflow: scroll">
+    
+        <!--Navbar-->
+        <nav class="navbar navbar-light navbar-1 white">
 
-        <!-- Navbar brand -->
-        <a class="navbar-brand" href="#"></a>
-    
-        <!-- Collapse button -->
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent15"
-        aria-controls="navbarSupportedContent15" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-    
-        <!-- Collapsible content -->
-        <div class="collapse navbar-collapse" id="navbarSupportedContent15">
-    
-        <!-- Links -->
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item ">
-                <a class="nav-link" href="instadog_gallery.php">Gallerie <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="article.php">Articles</a>
-            </li>
-            <li class="nav-item ">
-                <a class="nav-link" href="NouvelArticle.php">Ajouter un article <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item ">
-                <a class="nav-link" href="nouveau-chien.php">Ajouter un chien  <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="https://www.google.com/">chercher</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="logout.php">log out</a>
-            </li>
-        </ul>
-        <!-- Links -->
+            <a class="navbar-brand" href=""></a>.
+           
 
-    
+           
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent15"
+            aria-controls="navbarSupportedContent15" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+          
+            <!-- Collapsible content -->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent15">
+
+            <!-- Links -->
+            <ul class="navbar-nav mr-auto">
+            <li class="nav-item ">
+                    <a class="nav-link" href="login_user.php">login <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="instadog_gallery.php">Gallerie <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="article.php">Articles</a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="NouvelArticle.php">Ajouter un article <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="nouveau-chien.php">Ajouter un chien  <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://www.google.com/">chercher</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="logout.php">log out</a>
+                </li>
+            </ul> 
+            <!-- Links -->
         </div>
         <!-- Collapsible content -->
-    
-    </nav>
-  <!--/.Navbar-->
-</head>  
-
-
+    </nav>            
+    <!--/.Navbar-->
 
 <body>
     
@@ -68,19 +70,11 @@
         
             <input type="text" name="nom" id="defaultRegisterFormLastName" class="form-control" placeholder="Nom">
 
-                <input type="email" name ="email" id="defaultRegisterFormLastName" class="form-control" placeholder="email">
+            <input type="email" name ="email" id="defaultRegisterFormLastName" class="form-control" placeholder="email">
         
             <input type="password" name="pwd" id="defaultRegisterFormPassword" class="form-control" placeholder="mot de passe" aria-describedby="defaultRegisterFormPasswordHelpBlock">
             
             <input type="password" name="pwd2" id="defaultRegisterFormPassword" class="form-control" placeholder="mot de passe" aria-describedby="defaultRegisterFormPasswordHelpBlock">
-
-
-            <small id="defaultRegisterFormPhoneHelpBlock" class="form-text text-muted mb-4">Minimal 8 characters lenght</small>
-        
-            <div class="custom-control custom-checkbox">
-                <input type="checkbox" class="custom-control-input" id="defaultRegisterFormNewsletter">
-                <label class="custom-control-label" for="defaultRegisterFormNewsletter">Subscribe to our newsletter</label>
-            </div>
         
             <button class="btn btn-info my-4 btn-block" name="creer" type="submit">Creer</button>
         </form>
@@ -114,8 +108,6 @@
            if($pwd !== $pwd2) { $error[] = 'Attention , les deux champs de mots de pass sont identiques';}
             if (!filter_var($email, FILTER_VALIDATE_EMAIL)) { $error[] = "L'email est incorrect";}
 
-            else$appli->inseretUser($nom, $prenom, $email, $hash_pass);
-
               };
                 // تعيين جلسة لإشعار المستخدم بنجاح عملية تسجيله ، ثم تحويله لصفحة الدخول
             // $_SESSION['message'] = header('location:login_user.php'); exit;
@@ -142,35 +134,13 @@
                 }
                 echo '</ol></div>';
             };
-        
-        
+    
         ?>
          
 
         <div class="footer">
-            <p>S'enregistrer avec :</p>
-            <a type="button" class="light-blue-text mx-2">
-                <i class="fab fa-facebook-f"></i>
-            </a>
-            <a type="button" class="light-blue-text mx-2">
-                <i class="fab fa-twitter"></i>
-            </a>
-            <a type="button" class="light-blue-text mx-2">
-                <i class="fab fa-linkedin-in"></i>
-            </a>
-            <a type="button" class="light-blue-text mx-2">
-                <i class="fab fa-github"></i>
-            </a>
-
-            <div class="footer-copyright text-center py-3">
-                Realise 2018:
-                Cr&eacute;er par Rana et Joris
-            </div>
-         </div>
-
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+            <?php include 'footer.php';?>
+        </div>
     </body>
 
 </html>
