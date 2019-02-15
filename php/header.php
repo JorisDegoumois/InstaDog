@@ -15,7 +15,6 @@
     <!--Navbar-->
     <nav class="navbar navbar-light navbar-1 white">
 
-    <?php echo $_SESSION['nom']; echo $_SESSION['prenom'];?>
         <!-- Navbar brand -->
         <a class="navbar-brand" href="#"></a>
     
