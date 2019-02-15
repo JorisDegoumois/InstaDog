@@ -28,19 +28,19 @@
         <!-- Links -->
         <ul class="navbar-nav mr-auto">
             <li class="nav-item ">
-                <a class="nav-link" href="#">Gallerie <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="instadog_gallery.php">Gallerie <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="article.html">Articles</a>
+                <a class="nav-link" href="article.php">Articles</a>
             </li>
             <li class="nav-item ">
-                <a class="nav-link" href="Nouvel Article(fini).html">Ajouter un article <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="NouvelArticle.php">Ajouter un article <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item ">
-                <a class="nav-link" href="nouveau-chien(ter).html">Ajouter un chien  <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="nouveau-chien.php">Ajouter un chien  <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">chercher</a>
+                <a class="nav-link" href="https://www.google.com/">chercher</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="logout.php">log out</a>
