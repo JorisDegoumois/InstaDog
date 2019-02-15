@@ -39,7 +39,7 @@ class Connexion {
             $requete_prepare=$this->connexion->prepare(
                 "SELECT * 
                 FROM Chien
-                WHERE chienId = :id");
+                WHERE getenregistrechienId = :id");
              $requete_prepare->execute(array(":id"=>$id));
             $chienProfile=$requete_prepare->fetchObject("Chien");
             return $chienProfile;
@@ -79,7 +79,7 @@ class Connexion {
             $tousChien=$requete_prepare->fetchAll(PDO :: FETCH_CLASS ,"Chien");
             return $tousChien;
         }
-
+         
 
         //créer un function pour obtenir d'information de commentaire 
                 //انشاء تابع الحصول على معلومات المقالات
@@ -90,64 +90,72 @@ class Connexion {
                 Where userId = :id");
             $requete_prepare->execute(array(":id"=>$id));
             $commentArticle=$requete_prepare->fetchObject("Commentaire");
-            return $commentArticle;
-        }
 
-         // function pour insérer les information dans le tableau user
-         //تابع ادخال معلومات جدول المستخدم
-        
-        function insereUser($nom, $prenom, $pwd, $email){
+            }
+         
+        function inseretUser($nom, $prenom ,$email , $pwd){
             try{ $requete_prepare=$this->connexion->prepare(
-                `INSERT INTO Profile_User(nom, prenom, pwd, email)
-                VALUE(:nom, :prenom, :pwd, :email)`);
-            $requete_prepare->execute(array("nom"=>$nom,"prenom"=>$prenom,"pwd"=>$pwd,"email"=>$email));
+                "INSERT INTO Profile_User(nom, prenom, email, pwd)
+                VALUE (:nom, :prenom, :email, :pwd)");
+            $requete_prepare->execute(array("nom"=>$nom,"prenom"=>$prenom,"email"=>$email,"pwd"=>$pwd));
         }catch (Exception $bb){
             echo "Erreur:" .$bb->getMessage().'<br/>';
             echo 'N°: ' .$bb->getCode();
             return false;
         }
-        print_r($this->connexion->errorInfo());
-        return true;
-    }
 
+        
+        }
 
-         // function pour insérer les information dans le tableau chien
-         //تابع ادخال معلومات جدول الكلب
-        function inserChien($nom, $race, $age, $surnom, $elevage, $photo){
+         // function pgetenregistrerer les information dans le tableau chien
+         //تابع ادخال getenregistreجدول الكلب
+        function insertChien($userId, $nom, $race, $age, $surnom, $elevage, $photo){
             $requete_prepare=$this->connexion->prepare(
-                "INSERT INTO Chien(nom, race, age, surnom, elevage, photo)
-                VALUE (:nom, :race, :age, :surnom, :elevage, :photo");
-            $requete_prepare->execute(array("nom"=>$nom, "race"=>$race, "age"=>$age,"surnom"=>$surnom, "elevage"=>$elevage,"photo"=>$photo));
+                "INSERT INTO Chien(userId, nom, race, age, surnom, elevage, photo) VALUE (:userId, :nom, :race, :age, :surnom, :elevage, :photo)");
+            $requete_prepare->execute(array("userId"=>$userId, "nom"=>$nom, "race"=>$race, "age"=>$age,"surnom"=>$surnom, "elevage"=>$elevage,"photo"=>$photo));
+            var_dump($requete_prepare->errorInfo());
                 return true;
         }
 
         // function pour insérer les information dans le tableau artcle
          //تابع ادخال معلومات جدول المقالة
-        function inserArticle($message, $photo, $dateParution){
-            $requete_prepare=$this->connexion->prepare(
-                "INSERT INTO Article (message, photo, dateParution)
-                VALUE (:message, :photo, :dateParution");
-            $requete_prepare->execute(array());
+        function insertArticle($chienId, $message, $photo, $dateParution){
+            $requete_prepare=$this->connexion->prepare("INSERT INTO Article (chienId, message, photo, dateParution) VALUE (:chienId, :message, :photo, :dateParution)");
+            $requete_prepare->execute(array("chienId"=>$chienId, "message"=>$message, "photo"=>$photo, "dateParution"=>$dateParution));
+             var_dump($requete_prepare->errorInfo());
+                return true;
         }
 
+        //function pour login user by Email
+        function getenregistre($email){
+           $requete_prepare=$this->connexion->prepare(
+                "SELECT *  FROM Profile_User
+                 WHERE email = :email");
+            $requete_prepare->execute(array("email"=>$email));
+            $login=$requete_prepare->fetchObject("User");
+            return $login;
+        
+        } 
 
-
-    } 
+}
+       
+ 
 
 
     class User {
         private $userId;
-        private $nom;
         private $prenom;
-        private $pwd;
+        private $nom;
         private $email;
+        private $pwd;
+        
     
         public function __set($nom, $value){}
         public function getUserId(){return $this->userId;}
-        public function getNom(){return $this->nom;}
         public function getPrenom(){return $this->prenom;}
-        public function getPwd(){return $this->pwd;}
+        public function getNom(){return $this->nom;}
         public function getEmail(){return $this->email;}
+        public function getPwd(){return $this->pwd;}
     }
     
     class Chien {
@@ -193,9 +201,5 @@ class Connexion {
          public function getTexte(){return $this->texte;}
          public function getDate(){return $this->date;}
      }
-
-     
-    
-
 
 ?>

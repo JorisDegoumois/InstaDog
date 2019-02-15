@@ -1,0 +1,201 @@
+ul {
+    text-decoration: none;
+}
+.navbar-default{
+    padding:100px,
+}
+.responsive {
+    width: auto;
+    height: auto;
+    float: left;
+    margin: auto;
+    align-items:left;
+}
+.shadow-textarea textarea.form-control::placeholder {
+    font-weight: 300;
+}
+.shadow-textarea textarea.form-control {
+    padding-top: 100px;
+    padding-left: 0.8rem;
+}
+.form-group shadow-textarea{
+    padding-top: 100px;
+    padding-left: 0.8rem;
+}
+.container-fluid{
+    width :100%;
+}
+.img{
+    max-width: 100%;
+     height: auto;
+}
+
+ 
+body {
+    height: 100%;
+    margin:0;
+    padding:0;
+  }
+   
+  .global{
+    min-height: 100%;
+    position: relative;
+  }
+   
+  header{
+    background: #998B7D;
+    height: 50px;
+  }
+
+ .footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color:rgb(53, 46, 46);
+    color: white;
+    text-align: center;
+    margin: auto;
+  }
+
+  .container{
+      margin: auto;
+      widows: 100%;
+      height: auto;
+      align-items: center;
+      margin-bottom: 200px
+  }
+  
+  .card-header{
+      display: flex;
+  }
+  .flex-container{
+      display: flex;
+      width: 100%;
+    align-items: center;
+  }
+  article{
+      margin-left: 5%;
+      margin-right: 5%;
+  }
+p{
+  /*   padding-top: 75px; */
+    padding-left: 15px;
+
+}
+.form-group{
+    padding-bottom: 100px;
+}
+.article{
+        margin: auto;
+        width: 70%;
+        height: auto;
+        align-items: center;
+}
+.article2{
+    margin: auto;
+    width: 70%;
+    height: auto;
+    align-items: center;
+    margin-bottom: 200px;
+}
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    font-family: Arial;
+  }
+  
+  /* The grid: Four equal columns that floats next to each other */
+  .column {
+    float: left;
+    width: 25%;
+    padding: 10px;
+  }
+  
+  /* Style the images inside the grid */
+  .column img {
+    opacity: 0.8; 
+    cursor: pointer; 
+  }
+  
+  .column img:hover {
+    opacity: 1;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* The expanding image container */
+  .container {
+    position: relative;
+  }
+  
+  /* Expanding image text */
+  #imgtext {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    color: white;
+    font-size: 20px;
+  }
+  
+  /* Closable button inside the expanded image */
+  .closebtn {
+    position: absolute;
+    top: 10px;
+    right: 15px;}
+ul {
+    text-decoration: none;
+}
+.navbar-default{
+    padding:100px,
+}
+.responsive {
+    width: 10%;
+    height: auto;
+    float: left;
+    margin: auto;
+    align-items:left;
+}
+.shadow-textarea textarea.form-control::placeholder {
+    font-weight: 300;
+}
+.shadow-textarea textarea.form-control {
+    padding-top: 100px;
+    padding-left: 0.8rem;
+}
+.form-group shadow-textarea{
+    padding-top: 100px;
+    padding-left: 0.8rem;
+}
+.container-fluid{
+    width :100%;
+}
+.img-fluid{
+    max-width: 100%;
+     height: auto;
+}
+table {
+    align-items: center;
+}
+.container2{
+    margin-bottom: 150px;
+}
+.center{
+    align-items: center;
+}
+.card-footer{
+    width: 100%;
+}
+.card{
+    width: 50%;
+    margin:auto;
+    display: block;
+}

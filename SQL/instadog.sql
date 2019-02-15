@@ -13,7 +13,7 @@ create table Profile_User(
     userId int(100) AUTO_INCREMENT primary key,
     nom varchar (255),
     prenom varchar(255),
-    password varchar (255),
+    pwd varchar (255),
     email varchar(25)
 );
 

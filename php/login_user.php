@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+            <meta charset="utf-8">
+            <meta http-equiv="Content-Type" content="text/html;charset=utf-8" /> 
+            <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+                    <!-- Font Awesome -->
+            <link rel="stylesheet" hrgetenregistreef="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+            <!-- Bootstrap core CSS -->
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+            <!-- Material Design Bootstrap -->
+            <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.0/css/mdb.min.css" rel="stylesheet">
+            <!--  mon ficher css -->
+            <link href ="Instadog.css" rel="stylesheet">
+        
+    </head>
+
+<body>
+    <!--Navbar-->
+    <nav class="navbar navbar-light navbar-1 white">
+
+        <!-- Navbar brand -->
+        <a class="navbar-brand" href="#"></a>
+    
+        <!-- Collapse button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent15"
+        aria-controls="navbarSupportedContent15" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+    
+        <!-- Collapsible content -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent15">
+    
+        <!-- Links -->
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item ">
+                    <a class="nav-link" href="instadog_gallery.html">Gallerie <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item ">
+                <a class="nav-link" href="nouveau-chien(ter).html">Ajouter un chien  <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="https://www.google.com/"></a>chercher</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="Instadog_Connexion(termin).html">connexion</a>
+            </li>
+            <li class="nav-item">
+                    <a class="nav-link" href="Instadog_Connexion(termin).html">quitter</a>
+            </li>
+        </ul>
+        <!-- Links -->
+
+    
+        </div>
+        <!-- Collapsible content -->
+    
+    </nav>
+    <!--/.Navbar-->
+    <div class="border border-light p-5">
+        <img src="Instadog.png" height="150" width="150" alt="test img" align-item ="center">
+        <p class="h4 mb-4 text-center">Login</p>
+    </div>
+
+    <div class="container">
+        
+        <form action="login.php" method="post" >
+            <input type="email" id="email" name="email" class="form-control mb-4" placeholder="Email de utilisteur">
+        
+            <input type="password" id="password" name="pwd" class="form-control mb-4" placeholder="Mot de passe">
+
+
+            <div class="d-flex justify-content-between">
+                <div>
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="defaultLoginFormRemember">
+                        <label class="custom-control-label" for="defaultLoginFormRemember">Se souvenir de moi</label>
+                    </div>
+                </div>
+
+                <div>
+                    <a href="">mot de passe oubli&eacute;</a>
+                </div>
+            </div>
+
+            <button class="btn btn-info btn-block my-4" type="submit" name="submit" value="submit" >login</button>
+        
+        </form>    
+
+        <div class="text-center">
+            <p>Pas encore membre ?
+                <a href="nouveau-profile(ter).html">S'enregister</a>
+            </p>
+        </div>
+       
+
+    </div>
+
+    
+    <div class="footer">
+                <p>S'enregistrer avec :</p>
+                <a type="button" class="light-blue-text mx-2">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a type="button" class="light-blue-text mx-2">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a type="button" class="light-blue-text mx-2">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a type="button" class="light-blue-text mx-2">
+                    <i class="fab fa-github"></i>
+                </a>
+
+            <div class="footer-copyright text-center py-3">
+            ©Realise 2018:
+                Cr&eacute;er par Rana et Joris
+            </div>
+    </div>
+
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
