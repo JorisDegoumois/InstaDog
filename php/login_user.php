@@ -66,7 +66,7 @@ aria-controls="navbarSupportedContent15" aria-expanded="false" aria-label="Toggl
 
     <div class="container">
         
-        <form action="login.php" method="post" >
+        <form action="login_user.php" method="post" >
             <input type="email" id="email" name="email" class="form-control mb-4" placeholder="Email de utilisteur">
         
             <input type="password" id="password" name="pwd" class="form-control mb-4" placeholder="Mot de passe">
@@ -98,6 +98,35 @@ aria-controls="navbarSupportedContent15" aria-expanded="false" aria-label="Toggl
 
     </div>
 
+<?php
+    session_start();
+    require ("connexion_instadog.php");
+    $appli = new Connexion();
+
+     
+
+    if(isset($_POST['submit'])){ 
+    $user =$appli->getenregistre($_POST['email']);
+    $paswd = $user->getPwd();
+    $pwd = $_POST['pwd'];
+
+        if (password_verify($pwd, $paswd)) {
+           $_SESSION['userId'] = $user->getUserId();
+           $_SESSION['userEmail'] = $user->getEmail();
+           $_SESSION['getPrenom'] = $user->getPrenom();
+           $_SESSION['getNom'] = $user->getNom();
+ 
+
+           echo "<script type='text/javascript'>document.location.replace('profile_user.php');</script>";
+
+           
+           } else {
+            echo "You are not Register Yet or bad UserName/Password";
+           }
+    } ?>
+
+
+
     
     <div class="footer">
                 <p>S'enregistrer avec :</p>
@@ -121,6 +150,9 @@ aria-controls="navbarSupportedContent15" aria-expanded="false" aria-label="Toggl
     </div>
 
     
+
+
+
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>

@@ -6,10 +6,14 @@ require ("login_user.php");
 
 $appli = new Connexion();
 
+echo var_dump($user);
+
 if(isset($_POST['submit'])){ 
     $user =$appli->getenregistre($_POST['email']);
     $paswd = $user->getPwd();
      $pwd = $_POST['pwd'];
+  
+echo var_dump($user);
 
         if (password_verify($pwd, $paswd)) {
            $_SESSION['userId'] = $user->getUserId();

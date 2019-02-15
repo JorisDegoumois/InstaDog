@@ -1,16 +1,16 @@
+<?php session_start() ?>
 <!DOCTYPE html>
 <html lang="en">
 
     <head>
-            <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-                    <!-- Font Awesome -->
-            <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
-            <!-- Bootstrap core CSS -->
-            <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet">
-            <!-- Material Design Bootstrap -->
-            <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.0/css/mdb.min.css" rel="stylesheet">
-            <!--  mon ficher css -->
-            <link href ="Instadog.css" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+        <!-- Bootstrap core CSS -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Material Design Bootstrap -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.0/css/mdb.min.css" rel="stylesheet">
+        <!--  mon ficher css -->
+        <link href ="Instadog.css" rel="stylesheet">
         
          
     </head>
@@ -18,84 +18,79 @@
 
     <body> 
 
-    <?php session_start() ?>
+
         <!--Navbar-->
         <nav class="navbar navbar-light navbar-1 white">
 
-<!-- Navbar brand -->
-<a class="navbar-brand" href="#"></a>
-
-<!-- Collapse button -->
-<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent15"
-aria-controls="navbarSupportedContent15" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-
-<!-- Collapsible content -->
-<div class="collapse navbar-collapse" id="navbarSupportedContent15">
-
-<!-- Links -->
-<ul class="navbar-nav mr-auto">
-    <li class="nav-item ">
-        <a class="nav-link" href="instadog_gallery.php">Gallerie <span class="sr-only">(current)</span></a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" href="article.php">Articles</a>
-    </li>
-    <li class="nav-item ">
-        <a class="nav-link" href="NouvelArticle.php">Ajouter un article <span class="sr-only">(current)</span></a>
-    </li>
-    <li class="nav-item ">
-        <a class="nav-link" href="nouveau-chien.php">Ajouter un chien  <span class="sr-only">(current)</span></a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" href="https://www.google.com/">chercher</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" href="logout.php">log out</a>
-    </li>
-</ul>
-<!-- Links -->
-
-
-</div>
-<!-- Collapsible content -->
-
-</nav>            <!--/.Navbar-->
-        <div data-spy="scroll" data-target="#scrollspy-nav" data-offset="0" style="overflow: scroll">
-            
-            <strong><h1 style="text-align: center" font-family="fallback">Pierre Pivon</h1></strong>
-            
-      
-                <div class="float-right text-center"> 
-                    <img src="http://www.wallfizz.com/animaux/chien/218-petit-chien-WallFizz.jpg" class="justify-content-center" width="400px" height="400px" >
-                    <a href="profile-chien.html"><h3>ROCKY </h3></a>
-                </div>   
-
-                <div class="float-left text-center">    
-                    <img src="https://proxy.duckduckgo.com/iu/?u=http%3A%2F%2Fres.cloudinary.com%2Fdk-find-out%2Fimage%2Fupload%2Fq_80%2Cw_1440%2FA-rexfeatures_3829059a_lquuwl.jpg&f=1" width="400px" height="400px"  >
-                    <a href="profile-chien.html"><h3 > Laika </h3 > </a>
-                </div>
+            <a class="navbar-brand" href=""></a>.
            
-        </div> 
-<!--                 
-            </div> -->
- 
-                   <!--  
-                    <p>Plus de 800 chiens, r&eacute;partis dans une petite centaine d'attelages, se sont &eacute;lanc&eacute;s sur les pistes d&egrave;s samedi &agrave; 09h30, avec ensuite un d&eacute;part toutes les deux minutes. Huskys de Sib&eacute;rie, samoy&egrave;des, malamutes d'Alaska, chiens du Groenland ou races crois&eacute;es ont parcouru des distances allant de 8 &agrave; 35 kilom&egrave;tres.<br>
-                        La moiti&eacute; des mushers &eacute;taient suisses, l'autre provenait majoritairement de France. Mais certains Allemands, Belges, Hollandais et Italiens &eacute;taient &eacute;galement de la partie. "C'est une proportion plus &eacute;lev&eacute;e que les ann&eacute;es pr&eacute;c&eacute;dentes o&uacute;  il y avait environ 70% de Suisses et 30% d'&eacute;trangers", pr&eacute;cise Toinette Wisard.<br>
-                        Les traditionnelles courses ont &eacute;t&eacute; compl&eacute;t&eacute;es cette ann&eacute;e par un parcours d'exhibition de 500 m&egrave;tres. Il s'agit d'une course dont le d&eacute;part se fait en ligne et o&uacute;  les concurrents doivent slalomer entre des obstacles, en l'occurrence des sculptures sur le th&egrave;me de l'hiver. Suite &agrave; un accueil favorable, les organisateurs envisagent de p&eacute;renniser le parcours.
-                    </p>
- -->
-            <!-- div class="container" >
-            
-                    <div class="card-header">
-        
-                       
+
+                <?php echo $_SESSION['nom']; echo $_SESSION['prenom'];?>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent15"
+            aria-controls="navbarSupportedContent15" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+          
+            <!-- Collapsible content -->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent15">
+
+            <!-- Links -->
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item ">
+                    <a class="nav-link" href="instadog_gallery.php">Gallerie <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="article.php">Articles</a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="NouvelArticle.php">Ajouter un article <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="nouveau-chien.php">Ajouter un chien  <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://www.google.com/">chercher</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="logout.php">log out</a>
+                </li>
+            </ul>
+            <!-- Links -->
+
+
+            </div>
+            <!-- Collapsible content -->
+
+        </nav>            <!--/.Navbar-->
+      <div data-spy="scroll" data-target="#scrollspy-nav" data-offset="0" style="overflow: scroll">
+      </div> 
+   
+         
+        <div class="container">   
+            <div class="row">    
+                <?php  
+                    require ("connexion_instadog.php");
+                    $appli= new Connexion ;
+                    
+                    /*  
+                    echo $_SESSION['userId']; */
+                    
+                    $Dogs = $appli->getChienParUserId($_SESSION['userId']);
+                    
+                    
+                    foreach($Dogs as $Dog){
                         
-                        <p> La&iuml;ka (du russe: « petit aboyeur »note 1 ; 1954 – 3 novembre 1957) est une chienne du programme spatial sovi&eacute;tique et le premier être vivant mis en orbite autour de la Terre. Elle a &eacute;t&eacute; lanc&eacute;e par l'URSS &agrave; bord de l'engin spatial Spoutnik 2 le 3 novembre 1957, un mois apr&egrave;s le lancement du premier satellite artificiel Spoutnik 1. Apr&egrave;s le succ&egrave;s de Spoutnik 1, le dirigeant sovi&eacute;tique Nikita Khrouchtchev exigea le lancement d'un second engin pour le 7 novembre afin de c&eacute;l&eacute;brer le 40e anniversaire de la r&eacute;volution russe. Dans l'urgence, sans &eacute;tude pr&eacute;alable, Spoutnik 2 est construit en quatre semaines.
-                            La&iuml;ka mourut environ 7 heures apr&egrave;s le lancement, de stress et de surchauffe, probablement due &agrave; une d&eacute;faillance du syst&egrave;me de r&eacute;gulation de temp&eacute;rature. La vraie cause de sa mort ne fut r&eacute;v&eacute;l&eacute;e que plusieurs d&eacute;cennies apr&egrave;s la mission. Les versions qui subsist&egrave;rent jusqu'aux r&eacute;v&eacute;lations du docteur Dimitri Malachenkov en 2002 affirmaient qu'elle &eacute;tait morte en consommant de la nourriture empoisonn&eacute;e — qui avait &eacute;t&eacute; pr&eacute;par&eacute;e pour lui &eacute;viter de souffrir de la chaleur lors du retour de Spoutnik 2 dans l'atmosph&egrave;re — ou d'asphyxie &agrave; l'&eacute;puisement de ses r&eacute;serves d'oxyg&egrave;ne. Par ailleurs, on pensait jusqu'alors que La&iuml;ka &eacute;tait rest&eacute;e vivante quatre jours dans l'habitacle de l'engin spatial. La capsule spatiale se consuma le 14 avril 1958 en rentrant dans l'atmosph&egrave;re terrestre.
-                        </p>
-                     -->
-        
+                    echo '<div class="col-md-6 mb-5">
+                            <a href="#"><img src="'.$Dog->getPhoto().'" class="img-thumbnail" width="400px" height="400px"></a>
+                            '.$Dog->getNom().'
+                            </div>';
+
+                    }
+                ?>
+                </div>
+            </div><!--fin de first container-->
+
+           
+       
 
         <!-- footer -->
 

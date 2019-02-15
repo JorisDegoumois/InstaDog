@@ -53,9 +53,12 @@ require ("connexion_instadog.php");
 
 </nav>
 
-<?php if (isset($_POST['submit']))
+<?php
+$id  = $Chiem->getUserId();
+ if (isset($_POST['submit']))
     {
         $_SESSION['iduser']  =$id;
+
         $message=$_POST['message'];
         $dateParution=$_POST['dateParution'];
        }
@@ -68,7 +71,13 @@ require ("connexion_instadog.php");
      $file_size =$_FILES['image']['size'];
      $file_tmp =$_FILES['image']['tmp_name'];
      $file_type=$_FILES['image']['type'];
-     
+     //$file_ext=strtolower(end(explode('.',$_FILES['image']['name'])));
+     //$expensions= array("jpeg","jpg","png");
+   
+   /* if(in_array($file_ext,$expensions)=== false){
+      $errors[]="extension not allowed, please choose a JPEG or PNG file.";
+   }
+    */
    if($file_size > 2097152){
       $errors[]='File size must be excately 2 MB';
    }

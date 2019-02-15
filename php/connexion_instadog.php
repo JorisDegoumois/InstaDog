@@ -53,7 +53,7 @@ class Connexion {
                 FROM Chien 
                 WHERE userId =:id");
             $requete_prepare->execute(array(":id"=>$id));
-            $uerChienProfile=$requete_prepare->fetchObject("Chien");
+            $userChienProfile=$requete_prepare->fetchAll(PDO::FETCH_CLASS,"Chien");
             return $userChienProfile;
         }
 
@@ -167,6 +167,7 @@ class Connexion {
     
     class Chien {
         private $chienId;
+        private $userId;
         private $nom;
         private $race;
         private $age;
@@ -176,12 +177,13 @@ class Connexion {
         
         public function __set($nom, $value) {}
         public function getChienId(){return $this->chienId;}
+        public function getUserId(){return $this->userId;}
         public function getNom(){return $this->nom;}
         public function getRace(){return $this->race;}
         public function getAge(){return $this->age;}
         public function getSurnom(){return $this->surnom;}
-        public function getElevage(){return $this->$elevage;}
-        public function getPhoto(){return $this->$photo;}
+        public function getElevage(){return $this->elevage;}
+        public function getPhoto(){return $this->photo;}
     }
 
     class Article {
