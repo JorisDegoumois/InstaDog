@@ -92,16 +92,32 @@ session_start();
 
       </body>
 </html>
-        <?php
-        if(isset($_FILES['image'])){
-    $errors= array();
-    $file_name = $_FILES['image']['name'];
-    $file_size =$_FILES['image']['size'];
-    $file_tmp =$_FILES['image']['tmp_name'];
-    $file_type=$_FILES['image']['type'];
-    $file_ext=strtolower(end(explode('.',$_FILES['image']['name'])));
-    
-    $expensions= array("jpeg","jpg","png");
+
+  <?php
+
+ 
+require ("connexion_instadog.php");
+$appli = new Connexion ;
+if (isset($_POST['submit']))
+{
+    $id=$user->getUserId();
+    $nom  = $_POST['nom'];
+    $surnom  = $_POST['surnom'];
+    $race = $_POST['race'];
+    $naissance = $_POST['naissance'];
+    $elevage = $_POST['elevage'];
+} 
+ 
+
+   //uploder un photo
+    if(isset($_FILES['image'])){
+      $errors= array();
+      $file_name = $_FILES['image']['name'];
+      $file_size =$_FILES['image']['size'];
+      $file_tmp =$_FILES['image']['tmp_name'];
+      $file_type=$_FILES['image']['type'];
+      $file_ext=strtolower(end(explode('.',$_FILES['image']['name'])));
+      $expensions= array("jpeg","jpg","png");
     
     if(in_array($file_ext,$expensions)=== false){
        $errors[]="extension not allowed, please choose a JPEG or PNG file.";
@@ -130,53 +146,14 @@ session_start();
     </div>
  </body>
 </html> 
-      
-     <!--  <form action="upload.php" method="post" enctype="multipar/from-data"> -->
- <!-- <div class="custom-file"> 
- <form action="upload.php" method="post" enctype="multipart/form-data"> 
-             <input type="file" class="custom-file-input" name="image" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
-            <input type="submit " name = "submit" value="upload">
-           
-        </div> 
-        </form>
 
-      </div>
-       </form>
- -->
       <button class="btn btn-info my-4 btn-block" type="submit">Inserer</button><br><br>
       
   
 
-
-    <!-- footer -->
-
-    <div class="footer">
-
-      <p>S'enregistrer avec :</p>
-      
-      <a type="button" class="light-blue-text mx-2">
-        <i class="fab fa-facebook-f"></i>
-      </a>
-
-      <a type="button" class="light-blue-text mx-2">
-        <i class="fab fa-twitter"></i>
-      </a>
-
-      <a type="button" class="light-blue-text mx-2">
-        <i class="fab fa-linkedin-in"></i>
-      </a>
-
-      <a type="button" class="light-blue-text mx-2">
-        <i class="fab fa-github"></i>
-      </a>
-
-      <div class="footer-copyright text-center py-3">
-        Realise 2018:
-        Cr&eacute;er par Rana et Joris
-      </div>
-
-    </div>
-
+    <footer>
+      <?php include 'footer.php';?>
+    </footer>
 
 
    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

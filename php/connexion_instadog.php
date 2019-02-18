@@ -35,51 +35,89 @@ class Connexion {
 
         //créer un function pour obtenir d'information de chien par id de chien
         //انشاء تابع الحصول على معلومات الكلب بواسطة رقمه الخاص
-        function getChienParId($id){
+        public function getChienParId($id){
             $requete_prepare=$this->connexion->prepare(
                 "SELECT * 
                 FROM Chien
-                WHERE chienId = :id");
-             $requete_prepare->execute(array(":id"=>$id));
-            $chienProfile=$requete_prepare->fetchObject("Chien");
+                WHERE chienId = :id" );
+             $requete_prepare->execute(array(':id' => $id));
+            $chienProfile=$requete_prepare->fetchObject('Chien');
             return $chienProfile;
         }
+        
+    public function getDogProfile($id) // => profil-du-chien.php
+    {
+        // Je prépare la requête 
+        $requete_prepare = $this->connexion->prepare(
+            "SELECT * 
+            FROM Dog
+            WHERE id = :id"
+        );
+        // J'execute la requête en passant la valeur
+        $requete_prepare->execute(
+            array('id' => $id)
+        );
+        // Je récupère le résultat de la requête en mappant avec la classe Dog
+        $dog = $requete_prepare->fetchObject("Dog");
+        // Je retourne un object Dog
+        return $dog;
+    }
+
 
         //créer un function pourobtenir d'information de chien par id de user
         //انشاء تابع الحصول على معلومات الكلب بواسطة رقم المستخدم الخاص
-        function getChienParUserId($id){
+        public function getChienParUserId($id){
             $requete_prepare=$this->connexion->prepare(
                 "SELECT * 
                 FROM Chien 
                 WHERE userId =:id");
-            $requete_prepare->execute(array(":id"=>$id));
-            $userChienProfile=$requete_prepare->fetchAll(PDO::FETCH_CLASS,"Chien");
-            return $userChienProfile;
+            $requete_prepare->execute(array(':id'=>$id));
+            $listUserChien=$requete_prepare->fetchAll(PDO::FETCH_CLASS,'Chien');
+            return $listUserChien;
         }
 
         //créer un function pourobtenir d'information de article par id de chien
         //انشاء تابع الحصول على معلومات المقالة بواسطة رقم الكلب الخاص
-        function getArticleParIdChien($id){
+       public function getArticleParIdChien($id){
             $requete_prepare=$this->connexion->prepare(
                 "SELECT *
                 FROM Article
-                where chienId = :id");
-            $requete_prepare->execute(array(":id"=>$id));
-            $articleDeChien=$requete_prepare->fetchObject("Article");
+                where chienId =:id");
+            $requete_prepare->execute(array(':id'=>$id));
+            $articleDeChien=$requete_prepare->fetchAll(PDO::FETCH_CLASS,'Article');
             return $articleDeChien;
         }
-         
+
+ 
+        public function getDogArticles($dogId) // profil-du-chien.php
+        {
+            // Je prépare la requête 
+            $requete_prepare = $this->connexion->prepare(
+                "SELECT * 
+                FROM Article
+                WHERE dogId = :dogId"
+            );
+            // J'execute la requête en passant la valeur
+            $requete_prepare->execute(
+                array('dogId' => $dogId)
+            );
+            // Je récupère le résultat de la requête en mappant avec la classe Article
+            $listDogArticles = $requete_prepare->fetchAll(PDO::FETCH_CLASS, 'Article');
+            // Je retourne une liste d'objets Article
+            return $listDogArticles;
+        }
+        /* ------------------------------------------------------------------------------------------------------*/
         //créer un function pour obtenir d'information de tous les chien 
         //انشاء تابع الحصول على معلومات كل الكلاب 
-        function getAllChien(){
+        public function getAllChien(){
             $requete_prepare=$this->connexion->prepare(
                 "SELECT * 
-                FROM chien");
+                FROM Chien");
             $requete_prepare->execute();
-            $tousChien=$requete_prepare->fetchAll(PDO :: FETCH_CLASS ,"Chien");
+            $tousChien=$requete_prepare->fetchAll(PDO :: FETCH_CLASS ,'Chien');
             return $tousChien;
         }
-         
+    
 
         //créer un function pour obtenir d'information de commentaire 
                 //انشاء تابع الحصول على معلومات المقالات
@@ -108,7 +146,7 @@ class Connexion {
         }
 
          // function pgetenregistrerer les information dans le tableau chien
-         //تابع ادخال getenregistreجدول الكلب
+         //تابع ادخال جدول الكلب
         function insertChien($userId, $nom, $race, $age, $surnom, $elevage, $photo){
             $requete_prepare=$this->connexion->prepare(
                 "INSERT INTO Chien(userId, nom, race, age, surnom, elevage, photo) VALUE (:userId, :nom, :race, :age, :surnom, :elevage, :photo)");
@@ -131,8 +169,8 @@ class Connexion {
            $requete_prepare=$this->connexion->prepare(
                 "SELECT *  FROM Profile_User
                  WHERE email = :email");
-            $requete_prepare->execute(array("email"=>$email));
-            $login=$requete_prepare->fetchObject("User");
+            $requete_prepare->execute(array('email'=>$email));
+            $login=$requete_prepare->fetchObject('User');
             return $login;
         } 
 
