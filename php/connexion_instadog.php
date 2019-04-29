@@ -20,15 +20,19 @@ class Connexion {
             echo 'N°: ' .$e->getCode();
         }  
     }
+    //récupération de la connexion
+    public function getConnexion(){
+        return $this->connexion;
+    }
 
-        //créer un function pourobtenir d'information de user par id de user
+        /** créer un function pourobtenir d'information de user par id de user*/
         //انشاء تابع الحصول على معلومات المستخدم بواسطة رقمه الخاص
         function getUserParId($id){
             $requete_prepare=$this->connexion->prepare(
                 "SELECT * 
                 FROM Profile_User
                 WHERE userId = :id");
-            $requete_prepare->execute(array(":id"=>$id));
+            $requete_prepare->execute(array(":id" => $id));
             $userProfile=$requete_prepare->fetchObject("User");
             return $userProfile;
         }

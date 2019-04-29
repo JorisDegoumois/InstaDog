@@ -22,10 +22,10 @@
     <a type="button" class="light-blue-text mx-2">
       <i class="fab fa-linkedin-in"></i>
     </a>
-
-    <a type="button" class="light-blue-text mx-2">
-      <i class="fab fa-github"></i>
-    </a>
+    </head>
+    </head>" class="light-blue-text mx-2">
+    </head> fa-github"></i>
+    </head>
 
   <div class="footer-copyright text-center py-3">
     Realise 2018:

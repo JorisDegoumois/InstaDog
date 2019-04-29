@@ -36,36 +36,6 @@ $appli = new Connexion();
                     } var_dump($_SESSION['articleId']);
                 ?>               
                     
-                   <!--  <div class="card-footer text-left">
-                        <img src="https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.NaV6QRJVyh-M-lHBQ5YSHAHaHW%26pid%3D15.1&f=1" width="35" height="35">
-                        <strong>Agn&eacute;s:</strong>
-                        tres cute
-                    </div>
-    
-                    <div class="card-footer text-left">
-                        <img src="https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.Zb5-XDMwL991BL0cXnqj-gHaHa%26pid%3D15.1&f=1" width="35" height="35">
-                        <strong>Henry:</strong>
-                        elle ressemble beacoup &agrave; 
-                    </div>
-    
-                    <div class="form-group">
-                        <label for="comment"></label>
-                        <div>
-                            <textarea class="form-control" rows="3" id="comment" placeholder="Comment:"></textarea>
-                            <button>ajouter </button>
-                        </div>
-                    </div>
-
-                    </div>
-               
-                
-            </div>
-        </div>
-
-            <a href="Nouvel Article(fini).html"><button class="btn btn-info my-4 btn-block"  type="submit">ajouter un article</button></a>
-        </div>
-     </div>
- -->
 
 </body>
 
